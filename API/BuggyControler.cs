@@ -38,11 +38,13 @@ namespace API
         [HttpGet("server-error")]
         public ActionResult<string> GetServerError()
         {
-            var thing = _context.Users.Find(-1); // we get null when  false
 
-            var thingToReturn = thing.ToString(); // when run a method on null always get null as a reference
+                var thing = _context.Users.Find(-1); // we get null when  false
 
-            return thingToReturn;
+                var thingToReturn = thing.ToString(); // when run a method on null always get null as a reference
+
+                return thingToReturn;
+
         }
 
         [HttpGet("bad-request")]
